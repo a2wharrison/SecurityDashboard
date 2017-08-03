@@ -1,4 +1,6 @@
-<<<<<<< HEAD
+# SecurityDashboard
+Security Dashboard For Interactive Intelligence
+
 To access the django rest api tutorial, go to:
 http://www.django-rest-framework.org/tutorial/quickstart/
 
@@ -63,7 +65,6 @@ http://tecadmin.net/install-postgresql-server-on-ubuntu/#
 8. all custom css and js files should be saved within the desired index.html parent folder.
 9. The layouts folder can be added to, but the default layout should be used across the site. 
 10. See https://jekyllrb.com/ for all information on installation, and usage. 
-=======
-# SecurityDashboard
-Security Dashboard For Interactive Intelligence
->>>>>>> 23f16e81708b458e12922a6e71ede08298f1f389
+
+
+
