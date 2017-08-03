@@ -1,0 +1,22 @@
+ALAS json:
+Is the severity different than what amazon has? Why? 
+Is that something you are determining in a script and it is sent over to us?
+
+if we are going to have metadata for the module type, we need:
+
+title
+base link
+description (maybe)
+
+we are going to parse modules by name into the id associated, that way the rest api endpoint does not say the actual name
+
+high severity = 1. medium=2. low = 3
+
+how are we going to page refresh only the updated content?
+
+mark as read
+comment field
+
+template the page so they can change features
+
+web sockets, long polling, socetIO

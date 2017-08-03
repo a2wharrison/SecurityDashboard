@@ -1,0 +1,272 @@
+html {
+
+}
+body {
+    font-family:'Helvetica', 'Arial', 'Sans-Serif';
+    margin: 20px auto;
+    padding: 0px;
+    width: 93%;
+    height: 100%;
+    overflow-y: scroll;
+}
+
+h1 { font-size: 3.0em; }
+h2 { font-size: 2.0em; }
+h3 { font-size: 1.6em; }
+h4 { font-size: 1.3em; }
+h5 { font-size: 1.1em; }
+h6 { font-size: 0.9em; }
+
+li {
+    text-align: -webkit-match-parent;
+    display: list-item;
+    white-space: nowrap;
+}
+
+p {
+    font-size: 1em;
+    line-height: 1.4em;
+}
+
+
+header {
+    background-color: white;
+    background-position: 0% 41%;
+    border-bottom: 10px solid white;
+    font-family: 'Yatra One', cursive;
+}
+
+.main-wrapper {
+    margin-left:300px;
+}
+
+.reportTable {
+    margin-top: 20px;
+}
+
+table.reportTable {
+    width:100%;
+    text-align: center;
+    border-collapse: collapse;
+    margin-bottom:10px;
+}
+
+.reportTable th, td {
+    padding: 10px;
+}
+
+.reportTable th {
+    font-weight: bold;
+    font-size: 120%;
+    background-color: dodgerblue;
+    -webkit-text-fill-color: white;
+    text-align: center;
+}
+
+/*************
+ * ##sidebar *
+ *************/
+#sidebar-wrapper {
+  width: 300px;
+  background-color: white;
+  left: 0px;
+  color: dodgerblue;
+  position: absolute;
+  text-transform: capitalize;
+}
+
+.sidebar-nav {
+  position: absolute;
+  top: 0;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  list-style: none;
+}
+
+.sidebar-nav li {
+  text-indent: 30px;
+  line-height: 50px;
+}
+
+.sidebar-nav li a {
+  color: dodgerblue;
+  display: block;
+  text-decoration: none;
+  font-size: 1.4em;
+}
+.sidebar-nav li a:hover {
+  background: dodgerblue;
+  color: white;
+  font-weight: bold;
+}
+.sidebar-nav li a:active, .sidebar-nav li a:focus {
+  text-decoration: none;
+}
+
+/*
+#sidebar-wrapper.sidebar-toggle {
+  transition: all 0.3s ease-out;
+}
+
+@media (min-width: 768px) {
+  #sidebar-wrapper.sidebar-toggle {
+    transition: 0s;
+    left: 200px;
+  }
+}
+
+*/
+
+@media (min-width: 768px) {
+  .main-wrapper {
+        max-width: 1200px;
+        margin: 0 auto;
+    }
+  #sidbar-wrapper {
+    width: 300px;
+    float: left;
+    top: -150px;
+    /*
+     * Hide the empty space caused by the relative positioning
+     */
+    margin-bottom: -130px;
+    position: relative;
+  }
+  #sidebar-wrapper.sidebar-toggle {
+    margin-top 20px;
+    transition: 0s;
+    left: 200px;
+  }
+
+  .main-wrapper {
+    margin-left:300px;
+  }
+}
+
+/* Styling for the active link */
+
+a #logo {
+    float: right;
+    width: 40%;
+    position: absolute;
+}
+
+#logo img {
+   
+    -webkit-box-sizing: border-box;
+       -moz-box-sizing: border-box;
+            box-sizing: border-box;
+
+    border: 10px solid white;
+    float: right;
+}
+
+/*icon size formatting*/
+.statusIcon{
+    max-width: 45px;
+    max-height: 45px;
+    /*
+    width: 25%;
+    height: 25%;
+    border: 1px solid black;
+    */
+}
+
+
+.statusHeaderIcon{
+    max-width: 45px;
+    max-height: 45px;
+    /*
+    width:4%;
+    height:4%;
+    */
+}
+
+
+/*************
+ * ##header nav *
+ *************/
+
+nav {
+    line-height: 100%;
+    margin-bottom: 10px;
+}
+
+nav ul {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    display: inline-block;
+    float: right;
+}
+
+nav li {
+    display: inline;
+}
+
+nav li a {
+    padding: 20px;
+    color: #4cc5d8;
+}
+
+nav a{
+    text-decoration:none;
+    padding: 15px;
+}
+/* Styling for the active link */
+nav li a:link nav li a:visited {
+    color: #0f556f;
+}
+
+nav li a:active,
+nav li a:hover {	
+    color: #0f556f;
+}
+
+
+/************
+ * ##footer *
+ ************/
+
+footer {
+    clear: both;
+    text-align: center;
+    margin-top: 20px;
+    padding: 20px;
+}
+
+/************
+ * ##main *
+ ************/
+main
+{
+    min-height: 30%;
+    max-width: 80%;
+}
+
+main h1 {
+    text-align: center;
+}
+
+#key {
+    font-weight: bold;
+    text-transform: capitalize;
+}
+
+.table1heading {
+    margin-left:300px;
+    font-weight: bold;
+    font-size: 200%;
+    padding-bottom: 10px;
+    text-transform: capitalize;
+}
+
+#status {
+    font-weight: bold;
+}
+
+.save {
+    margin-top: 10px;
+    margin-left: 1375px;
+    margin-bottom: 20px;
+}

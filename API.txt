@@ -1,0 +1,81 @@
+List of API Options:
+
+GET /modules - list of modules
+GET /modules/1/ - specific module
+POST /module - create new module
+POST /module/1/ - update specific module
+DELETE /moudle/1/ - delete specific module
+
+GET /modules/1/reports - list of reports for module
+GET /module/1/reports/1/ - retrieves a specific report
+POST /module/1/reports - create a new report for module
+POST /module/1/reports/1 - update a report for a module
+DELETE /module/1/reports - delete all reports
+DELETE /module/1/reports/1 - delete specific report
+
+GET /module/1/reports/1/items - list of items in report
+GET /module/1/reports/1/items/:item-name - get a specific item from a report
+POST /module/1/reports/1/items - update all items in a report
+POST /module/1/reports/1/items/:item-name - update an item in a report
+DELETE /module/1/reports/1/items - delete the content of this report
+DELETE /module/1/reports/1/items/:item-name - delete the content of item in report
+
+?title=:title
+?id=:id
+?sort=-updated_at
+?severity=:severity
+?resolved=:true/false
+?
+
+Examples:
+
+GET /modules/1/ --> retrieve JSON data that Jarrod sent for Amazon Securtiy bulletins
+GET /modules/1/reports/1 --> retreve JSON data for one bulletin
+GET /modules/1/reports/1/items/title --> retrieves the title of the report
+
+
+consideration: are they naming anything? if they are use PUT
+If server decides, use POST.
+PUT is for creating when you know the URL of the thing you will create
+
+if it is the exact same thing it should be a PUT. Eliminate that there are duplicate records by POSTing the same thing twice
+
+
+
+/dashboard
+    /modules?module={module_id} --> if valid, turn into module/{module-id}
+    /modules?title=:title
+        /reports?report={report_id} --> if valid, turn into /report/{report-id}
+            /items?item={item_id}  --> if valid, turn into /item/{item-id}
+        /reports?severity=:1 --> filter on severity of report
+        /reports?sort=-severity --> sort reports by priority from 1 to 3 (high to low)
+        /reports?sort=-updated_at --> retrieve recently updated reports
+        /reports?title=:title
+        
+Home screen:
+    1. dashboard/
+    2. displays the content of the homepage. Current view of AngularJS content stand alone
+    3. Have a notification bar on the top right
+        a. notification set up to access webhooks to alert on high alert(1)
+        b. 
+    4. List all modules on the sidebar (what order?, alphabetical)
+        5. Each module link will call to load a new screen with the content
+
+
+/dashboard/modules
+    1. What does this load? nothing. there is no selected module. restrict page
+    2. A module will contain a potiential to have reports listed.
+    3. The general content of a module will be the metadata:
+         a. id
+         b. title
+         c. data
+    4. Options to Get:
+         a. ?module-id={int}
+             i. if invalid - do not load any content, stay on current page, or revert to homepage
+             ii. /{module-id} such as /modules/2/
+         b. ?
+/dashboard/modules/{module-id}
+    1. Displays the general content for the module
+    2. display the list of all reports
+    
+/dashboard/module

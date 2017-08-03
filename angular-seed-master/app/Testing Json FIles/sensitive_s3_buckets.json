@@ -1,0 +1,52 @@
+[
+    {
+        "module": "sensitive_s3_buckets",
+        "severity": 1,
+        "title": "Sensitive S3 bucket exposed: prod-realtime-files",
+        "data": {
+            "bucket": "prod-realtime-files",
+            "bucket_policy": {"Version":"2012-10-17","Id":"PutObjPolicy","Statement":[{"Sid":"DenyUnEncryptedObjectUploads","Effect":"Deny","Principal":{"AWS":"*"},"Action":"s3:PutObject","Resource":"arn:aws:s3:::prod-realtime-files/*","Condition":{"StringNotEquals":{"s3:x-amz-server-side-encryption":"AES256"}}},{"Sid":"SkywalkerDownloadService","Effect":"Allow","Principal":{"AWS":"arn:aws:iam::cloudfront:user/CloudFront Origin Access Identity E38T9JRLS1DK2L"},"Action":"s3:GetObject","Resource":"arn:aws:s3:::prod-realtime-files/*"}]},
+            "files_accessible": true
+        }
+    },
+    {
+        "module": "sensitive_s3_buckets",
+        "severity": 1,
+        "title": "Sensitive S3 bucket exposed: prod-apne1-realtime-files",
+        "data": {
+            "bucket": "prod-apne1-realtime-files",
+            "bucket_policy": {"Version":"2012-10-17","Id":"PutObjPolicy","Statement":[{"Sid":"SkywalkerDownloadService","Effect":"Allow","Principal":{"AWS":"arn:aws:iam::cloudfront:user/CloudFront Origin Access Identity E38T9JRLS1DK2L"},"Action":"s3:GetObject","Resource":"arn:aws:s3:::prod-apne1-realtime-files/*"}]},
+            "files_accessible": true
+        }
+    },
+    {
+        "module": "sensitive_s3_buckets",
+        "severity": 1,
+        "title": "Sensitive S3 bucket exposed: prod-euw1-realtime-files",
+        "data": {
+            "bucket": "prod-euw1-realtime-files",
+            "bucket_policy": {"Version":"2012-10-17","Id":"PutObjPolicy","Statement":[{"Sid":"SkywalkerDownloadService","Effect":"Allow","Principal":{"AWS":"arn:aws:iam::cloudfront:user/CloudFront Origin Access Identity E38T9JRLS1DK2L"},"Action":"s3:GetObject","Resource":"arn:aws:s3:::prod-euw1-realtime-files/*"}]},
+            "files_accessible": true
+        }
+    },
+    {
+        "module": "sensitive_s3_buckets",
+        "severity": 1,
+        "title": "Sensitive S3 bucket exposed: prod-recording-keystore",
+        "data": {
+            "bucket": "prod-recording-keystore",
+            "bucket_policy": {},
+            "files_accessible": true
+        }
+    },
+    {
+        "module": "sensitive_s3_buckets",
+        "severity": 1,
+        "title": "Sensitive S3 bucket exposed: prod-apne1-recording-keystore",
+        "data": {
+            "bucket": "prod-apne1-recording-keystore",
+            "bucket_policy": {},
+            "files_accessible": true
+        }
+    }
+]

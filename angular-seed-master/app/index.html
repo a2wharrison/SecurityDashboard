@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="securityDashboard">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <!-- Bootstrap -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+        <!--Angular-->
+        <script src="https://code.angularjs.org/1.5.1/angular.min.js"></script>
+        <script src="//angular-ui.github.io/bootstrap/ui-bootstrap-tpls-0.11.0.js"></script>
+
+        <link rel="stylesheet" type="text/css" href="css/normalize.css">
+        <link href="https://fonts.googleapis.com/css?family=Yatra+One" rel="stylesheet">
+
+        <link rel="stylesheet" type="text/css" href="css/main.css">
+
+        <script src="http://code.jquery.com/jquery-latest.min.js" type="text/javascript"></script>
+        <script src="js/securityDashboard.js"></script>
+
+        <link rel="icon"  type="image/png" href="/img/favicon.ico">
+
+        <title>Contextual Security Dashboard</title>
+    </head>
+
+    <body ng-controller="SecurityDashboardController">
+
+        <div ng-init="getHome(); getModList()"></div>
+
+        <header>
+            <nav>
+                <img class="logo" src="/img/logo.png" alt="Interactive Intelligence">
+                <ul class="nav nav-tabs" role="tablist">
+                    <li role="presentation" ng-class="{'active': tabName == 'home'}"><a ng-click="getHome(); showHome(); currentShowing = 0; tabName = 'home'" href="#Home"><img class="statusIcon" src="/img/home.png" alt="Resolved"></a></li>
+
+                    <li role="presentation" ng-class="{'active': tabName == 'notice'}"><a ng-click="getNotice(); showNotice(); currentShowing = 0; tabName = 'notice'" href="#Notice"><img class="statusIcon" src="/img/bell.png" alt="Resolved"></a></li>
+                </ul>
+                <div class="tab-content">
+                    <div role="tabpanel;" class="tab-pane" id="home">Home</div>
+                    <div role="tabpanel;" class="tab-pane" id="notifications">Notice</div>
+                </div>
+            </nav>
+        </header>
+
+        <div id="sidebar-wrapper" class="sidebar toggle">    
+            <ul class="sidebar-nav" >
+                <li ng-repeat="mod in modList"><a ng-click="getMod(mod.module); showMod()" href="#{{mod.module}}"><span ng-bind="mod.module"></span></a></li>
+            </ul>
+        </div>
+    
+        <h3 class="table1heading">
+          <span ng-if="viewReport">
+            <span ng-if="viewReportData.status == 'F'"><img class="statusHeaderIcon" src="/img/checkmark-flat/128x128.png" alt="fixed"></span>
+            <span ng-if="viewReportData.status == 'V'"><img class="statusHeaderIcon" src="/img/eye-flat/128x128.png" alt="viewed"></span>
+            <span ng-if="viewReportData.status == 'U'"><img class="statusHeaderIcon" src="/img/error-flat/128x128.png" alt="unread"></span>
+          </span>
+          <span ng-bind="myTitle"></span>
+          <span ng-if="viewReport">
+            <span ng-if="viewReportData.severity"></span>
+          </span>
+        </h3>
+
+    <div class="main-wrapper">
+
+        <div ng-if="viewReport" class="status">
+           <span id="status">Status: </span>
+            <select ng-model="status"
+                ng-options="status.status for status in statuses"
+                ng-change="updateReportStatus(status.status)">
+            </select>
+        </div>
+
+
+        <table class="reportTable table-bordered table-striped">
+            <tr ng-if="viewNotice || viewHome || viewMod">
+                    <th><a ng-click="toggleSort('status')">Status</a></th>
+                    <th ng-if="viewNotice || viewHome"><a ng-click="toggleSort('module')">Module</a></th>
+                    <th><a ng-click="toggleSort('date')">Date</a></th>
+                    <th><a ng-click="toggleSort('title')">Title</a></th>
+                    <th><a ng-click="toggleSort('severity')">Severity</a></th>
+            </tr>
+            
+            
+            <tr ng-if="viewMod" ng-repeat="report in viewListData | orderBy:columnName:orderBool" ng-show="showMod">
+              <td ng-if="report.status == 'F'"><img class="statusIcon" src="/img/checkmark-flat/128x128.png" alt="fixed"></td>
+              <td ng-if="report.status == 'V'"><img class="statusIcon" src="/img/eye-flat/128x128.png" alt="viewed"></td>
+              <td ng-if="report.status == 'U'"><img class="statusIcon" src="/img/error-flat/128x128.png" alt="unread"></td>
+              <td><span ng-bind="report.date"></span></td>
+              <td><a ng-click="getReport(report.id); showReport()" ng-href="#reportDetail/{{report.id}}"><span ng-bind="report.title"></span></a></td>
+              <td ng-bind="report.severity"></td>   
+            </tr>
+            <tr ng-if="viewHome" ng-repeat="report2 in viewListData | orderBy:columnName:orderBool" ng-show="showHome" >
+              <td ng-if="report2.status == 'F'"><img class="statusIcon" src="/img/checkmark-flat/128x128.png" alt="fixed"></td>
+              <td ng-if="report2.status == 'V'"><img class="statusIcon" src="/img/eye-flat/128x128.png" alt="viewed"></td>
+              <td ng-if="report2.status == 'U'"><img class="statusIcon" src="/img/error-flat/128x128.png" alt="unread"></td>
+              <td><span ng-bind="report2.module"></span></td>
+              <td><span ng-bind="report2.date"></span></td>
+              <td><a ng-click="getReport(report2.id); showReport()" ng-href="#reportDetail/{{report2.id}}"><span ng-bind="report2.title"></span></a></td>
+              <td ng-bind="report2.severity"></td>
+            </tr>
+            <tr ng-if="viewNotice" ng-repeat="report3 in viewListData | orderBy:columnName:orderBool">
+              <td ng-if="report3.status == 'F'"><img class="statusIcon" src="/img/checkmark-flat/128x128.png" alt="fixed"></td>
+              <td ng-if="report3.status == 'V'"><img class="statusIcon" src="/img/eye-flat/128x128.png" alt="viewed"></td>
+              <td ng-if="report3.status == 'U'"><img class="statusIcon" src="/img/error-flat/128x128.png" alt="unread"></td>
+              <td><span ng-bind="report3.module"></span></td>
+              <td><span ng-bind="report3.date"></span></td>
+              <td><a ng-click="getReport(report3.id); showReport()" ng-href="#reportDetail/{{report3.id}}"><span ng-bind="report3.title"></span></a></td>
+              <td ng-bind="report3.severity"></td>
+            </tr>
+            <tr ng-if="viewReport" ng-repeat="(key,value) in viewReportData.data">
+              <div ng-repeat="(key,value) in report"-->
+                <td><span id="key" ng-bind="key" ></span></td>
+                <!-- <td><span ng-bind="value"></span></td> -->
+                <td><span ng-bind="value"></span></td>
+                <!--<td><span ng-if="checkForNested" ng-repeat="(k,v) in value">{{k}} : {{v}}</span></td>
+                <td><span ng-if="checkForNested" ng-repeat="(a,b) in v"> {{a}} : {{b}}</span></td> -->
+              </div>
+            </tr>
+        </table>
+        
+        <div ng-if="viewReport">
+            <form>
+                
+               Notes:<br>
+               <textarea id="Notes" rows="10" cols="75">{{viewReportData.comment}}</textarea><br>
+               <input type="submit" value="Update" ng-click="updateReportNotes()">
+            </form>
+             <br><br><br>
+                
+           </div>
+           <div ng-if="viewList">
+             <a ng-click="getPrevPage();" href="#"><span>Previous</span></a>
+             <a ng-click="getNextPage();" href="#"><span>Next</span></a>
+        </div>
+    </div>
+
+</body>
+</html>

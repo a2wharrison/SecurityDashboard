@@ -1,0 +1,274 @@
+[
+    {
+        "module": "alas",
+        "severity": 1,
+        "title": "ALAS-2016-746 (important): lighttpd",
+        "data": {
+            "title": "ALAS-2016-746 (important): lighttpd",
+            "link": "https://alas.aws.amazon.com/ALAS-2016-746.html",
+            "guid": "https://alas.aws.amazon.com/ALAS-2016-746.html",
+            "pubDate": "Thu, 15 Sep 2016 19:00:00 GMT",
+            "categories": [],
+            "author": "",
+            "thumbnail": "",
+            "description": "CVE-2016-1000212",
+            "content": "CVE-2016-1000212"
+        }
+    },
+    {
+        "module": "alas",
+        "severity": 2,
+        "title": "ALAS-2016-744 (medium): libgcrypt, gnupg",
+        "data": {
+            "title": "ALAS-2016-744 (medium): libgcrypt, gnupg",
+            "link": "https://alas.aws.amazon.com/ALAS-2016-744.html",
+            "guid": "https://alas.aws.amazon.com/ALAS-2016-744.html",
+            "pubDate": "Thu, 15 Sep 2016 19:00:00 GMT",
+            "categories": [],
+            "author": "",
+            "thumbnail": "",
+            "description": "CVE-2016-6313",
+            "content": "CVE-2016-6313"
+        }
+    },
+    {
+        "module": "alas",
+        "severity": 2,
+        "title": "ALAS-2016-747 (medium): postgresql92, postgresql93, postgresql94",
+        "data": {
+            "title": "ALAS-2016-747 (medium): postgresql92, postgresql93, postgresql94",
+            "link": "https://alas.aws.amazon.com/ALAS-2016-747.html",
+            "guid": "https://alas.aws.amazon.com/ALAS-2016-747.html",
+            "pubDate": "Thu, 15 Sep 2016 19:00:00 GMT",
+            "categories": [],
+            "author": "",
+            "thumbnail": "",
+            "description": "CVE-2016-5423, CVE-2016-5424",
+            "content": "CVE-2016-5423, CVE-2016-5424"
+        }
+    },
+    {
+        "module": "alas",
+        "severity": 3,
+        "title": "ALAS-2016-748 (important): java-1.6.0-openjdk",
+        "data": {
+            "title": "ALAS-2016-748 (important): java-1.6.0-openjdk",
+            "link": "https://alas.aws.amazon.com/ALAS-2016-748.html",
+            "guid": "https://alas.aws.amazon.com/ALAS-2016-748.html",
+            "pubDate": "Thu, 15 Sep 2016 19:00:00 GMT",
+            "categories": [],
+            "author": "",
+            "thumbnail": "",
+            "description": "CVE-2016-3550, CVE-2016-3606, CVE-2016-3458, CVE-2016-3500, CVE-2016-3508",
+            "content": "CVE-2016-3550, CVE-2016-3606, CVE-2016-3458, CVE-2016-3500, CVE-2016-3508"
+        }
+    },
+    {
+        "module": "alas",
+        "severity": 1,
+        "title": "ALAS-2016-745 (medium): bind",
+        "data": {
+            "title": "ALAS-2016-745 (medium): bind",
+            "link": "https://alas.aws.amazon.com/ALAS-2016-745.html",
+            "guid": "https://alas.aws.amazon.com/ALAS-2016-745.html",
+            "pubDate": "Thu, 15 Sep 2016 19:00:00 GMT",
+            "categories": [],
+            "author": "",
+            "thumbnail": "",
+            "description": "CVE-2016-2775",
+            "content": "CVE-2016-2775"
+        }
+    },
+    {
+        "module": "alas",
+        "severity": 2,
+        "title": "ALAS-2016-741 (medium): python34, python27, python26",
+        "data": {
+            "title": "ALAS-2016-741 (medium): python34, python27, python26",
+            "link": "https://alas.aws.amazon.com/ALAS-2016-741.html",
+            "guid": "https://alas.aws.amazon.com/ALAS-2016-741.html",
+            "pubDate": "Thu, 01 Sep 2016 18:00:00 GMT",
+            "categories": [],
+            "author": "",
+            "thumbnail": "",
+            "description": "CVE-2016-1000110",
+            "content": "CVE-2016-1000110"
+        }
+    },
+    {
+        "module": "alas",
+        "severity": 2,
+        "title": "ALAS-2016-740 (medium): kernel",
+        "data": {
+            "title": "ALAS-2016-740 (medium): kernel",
+            "link": "https://alas.aws.amazon.com/ALAS-2016-740.html",
+            "guid": "https://alas.aws.amazon.com/ALAS-2016-740.html",
+            "pubDate": "Thu, 01 Sep 2016 18:00:00 GMT",
+            "categories": [],
+            "author": "",
+            "thumbnail": "",
+            "description": "CVE-2016-6828",
+            "content": "CVE-2016-6828"
+        }
+    },
+    {
+        "module": "alas",
+        "severity": 2,
+        "title": "ALAS-2016-739 (medium): collectd",
+        "data": {
+            "title": "ALAS-2016-739 (medium): collectd",
+            "link": "https://alas.aws.amazon.com/ALAS-2016-739.html",
+            "guid": "https://alas.aws.amazon.com/ALAS-2016-739.html",
+            "pubDate": "Thu, 01 Sep 2016 18:00:00 GMT",
+            "categories": [],
+            "author": "",
+            "thumbnail": "",
+            "description": "CVE-2016-6254",
+            "content": "CVE-2016-6254"
+        }
+    },
+    {
+        "module": "alas",
+        "severity": 2,
+        "title": "ALAS-2016-732 (medium): samba",
+        "data": {
+            "title": "",
+            "link": "https://alas.aws.amazon.com/ALAS-2016-732.html",
+            "guid": "https://alas.aws.amazon.com/ALAS-2016-732.html",
+            "pubDate": "Wed, 17 Aug 2016 13:30:00 GMT",
+            "categories": [],
+            "author": "",
+            "thumbnail": "",
+            "description": "CVE-2016-2119",
+            "content": "CVE-2016-2119"
+        }
+    },
+    {
+        "module": "alas",
+        "severity": 2,
+        "title": "ALAS-2016-832 (medium): samba",
+        "data": {
+            "title": "",
+            "link": "https://alas.aws.amazon.com/ALAS-2016-732.html",
+            "guid": "https://alas.aws.amazon.com/ALAS-2016-732.html",
+            "pubDate": "Wed, 17 Aug 2016 13:30:00 GMT",
+            "categories": [],
+            "author": "",
+            "thumbnail": "",
+            "description": "CVE-2016-2119",
+            "content": "CVE-2016-2119"
+        }
+    },
+    {
+        "module": "alas",
+        "severity": 2,
+        "title": "ALAS-2016-831 (medium): samba",
+        "data": {
+            "title": "",
+            "link": "https://alas.aws.amazon.com/ALAS-2016-732.html",
+            "guid": "https://alas.aws.amazon.com/ALAS-2016-732.html",
+            "pubDate": "Wed, 17 Aug 2016 13:30:00 GMT",
+            "categories": [],
+            "author": "",
+            "thumbnail": "",
+            "description": "CVE-2016-2119",
+            "content": "CVE-2016-2119"
+        }
+    },
+    {
+        "module": "alas",
+        "severity": 2,
+        "title": "ALAS-2016-833 (medium): samba",
+        "data": {
+            "title": "",
+            "link": "https://alas.aws.amazon.com/ALAS-2016-732.html",
+            "guid": "https://alas.aws.amazon.com/ALAS-2016-732.html",
+            "pubDate": "Wed, 17 Aug 2016 13:30:00 GMT",
+            "categories": [],
+            "author": "",
+            "thumbnail": "",
+            "description": "CVE-2016-2119",
+            "content": "CVE-2016-2119"
+        }
+    },
+    {
+        "module": "alas",
+        "severity": 2,
+        "title": "ALAS-2016-834 (medium): samba",
+        "data": {
+            "title": "",
+            "link": "https://alas.aws.amazon.com/ALAS-2016-732.html",
+            "guid": "https://alas.aws.amazon.com/ALAS-2016-732.html",
+            "pubDate": "Wed, 17 Aug 2016 13:30:00 GMT",
+            "categories": [],
+            "author": "",
+            "thumbnail": "",
+            "description": "CVE-2016-2119",
+            "content": "CVE-2016-2119"
+        }
+    },
+    {
+        "module": "alas",
+        "severity": 2,
+        "title": "ALAS-2016-835 (medium): samba",
+        "data": {
+            "title": "",
+            "link": "https://alas.aws.amazon.com/ALAS-2016-732.html",
+            "guid": "https://alas.aws.amazon.com/ALAS-2016-732.html",
+            "pubDate": "Wed, 17 Aug 2016 13:30:00 GMT",
+            "categories": [],
+            "author": "",
+            "thumbnail": "",
+            "description": "CVE-2016-2119",
+            "content": "CVE-2016-2119"
+        }
+    },
+    {
+        "module": "alas",
+        "severity": 2,
+        "title": "ALAS-2016-836 (medium): samba",
+        "data": {
+            "title": "",
+            "link": "https://alas.aws.amazon.com/ALAS-2016-732.html",
+            "guid": "https://alas.aws.amazon.com/ALAS-2016-732.html",
+            "pubDate": "Wed, 17 Aug 2016 13:30:00 GMT",
+            "categories": [],
+            "author": "",
+            "thumbnail": "",
+            "description": "CVE-2016-2119",
+            "content": "CVE-2016-2119"
+        }
+    },
+    {
+        "module": "alas",
+        "severity": 2,
+        "title": "ALAS-2016-837 (medium): samba",
+        "data": {
+            "title": "",
+            "link": "https://alas.aws.amazon.com/ALAS-2016-732.html",
+            "guid": "https://alas.aws.amazon.com/ALAS-2016-732.html",
+            "pubDate": "Wed, 17 Aug 2016 13:30:00 GMT",
+            "categories": [],
+            "author": "",
+            "thumbnail": "",
+            "description": "CVE-2016-2119",
+            "content": "CVE-2016-2119"
+        }
+    },
+    {
+        "module": "alas",
+        "severity": 2,
+        "title": "ALAS-2016-838 (medium): samba",
+        "data": {
+            "title": "",
+            "link": "https://alas.aws.amazon.com/ALAS-2016-732.html",
+            "guid": "https://alas.aws.amazon.com/ALAS-2016-732.html",
+            "pubDate": "Wed, 17 Aug 2016 13:30:00 GMT",
+            "categories": [],
+            "author": "",
+            "thumbnail": "",
+            "description": "CVE-2016-2119",
+            "content": "CVE-2016-2119"
+        }
+    }
+]
