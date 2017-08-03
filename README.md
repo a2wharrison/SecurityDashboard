@@ -1,5 +1,4 @@
-# SecurityDashboard
-Security Dashboard For Interactive Intelligence
+# Security Dashboard
 
 To access the django rest api tutorial, go to:
 http://www.django-rest-framework.org/tutorial/quickstart/
